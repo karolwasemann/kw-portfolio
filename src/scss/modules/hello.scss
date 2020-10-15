@@ -6,36 +6,44 @@
   align-items: center;
 
   &__img {
-    border: 8px solid rgb(219, 219, 219);
+    border: 12px solid rgb(219, 219, 219);
     border-radius: 50%;
-    width: 176px;
-    height: 176px;
-    margin-bottom: 72px;
-  }
-
-  &__header {
-    max-width: 830px;
-    text-align: center;
+    width: 96px;
+    height: 96px;
+    margin-bottom: 24px;
   }
 }
 
-.header {
-  margin-bottom: 60px;
+.hello-header {
+  margin: 0 10px 48px 10px;
+  text-align: center;
 
   &__title {
-    font-size: 32px;
+    font-size: 26px;
   }
 
-  &__descriptio {
-    font-size: 20px;
+  &__description {
+    font-size: 16px;
   }
 
   &__contact {
-    width: 280px;
+    text-decoration: none;
+    color: white;
+    width: 278px;
     background-color: #4DA8FF;
     text-align: center;
     font-size: 16px;
     line-height: 34px;
     border-radius: 64px;
   }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  background: #1070CA;
+  align-items: center;&__header{
+font-size: 36px;
+margin-top: 64px;
+}
 }
