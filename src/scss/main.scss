@@ -3,13 +3,14 @@
 @import "_variables";
 @import "modules/hello.scss";
 @import "modules/skills.scss";
+@import "modules/projects";
 
 
 *,
 :after,
 :before {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
