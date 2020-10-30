@@ -1,0 +1,52 @@
+.projects {
+    padding: 64px 16px 0;
+
+    &__header {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 48px;
+        text-align: center;
+    }
+
+    &__description {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 32px;
+        color: $text;
+        margin-bottom: 46px;
+    }
+}
+
+.project {
+    background: #212528;
+    border-radius: 16px;
+    position: relative;
+
+    &__widnow {
+        background: #1E1E1E;
+        height: 40px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 16px;
+    }
+
+    &__dot {
+        margin: 0 4px 0 0;
+        border-radius: 50%;
+        display: block;
+        height: 8px;
+        width: 8px;
+        background: $dot;
+    }
+
+    &__gh-logo {
+        position: absolute;
+        display: block;
+        background-image: url(../assets/img/gh-logo.svg);
+        width: 21px;
+        height: 20px;
+        top: 56px;
+        left: 17px;
+    }
+}
