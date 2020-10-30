@@ -11,11 +11,10 @@
 :before {
   -webkit-box-sizing: inherit;
   box-sizing: border-box;
-  // margin: 0;
-  // padding: 0;
 }
 
 body {
+  padding: 0 16px;
   width: 100%;
   color: $textDark;
   font-family: 'Nunito', sans-serif;

@@ -9,6 +9,7 @@
     }
 
     &__description {
+        text-align: center;
         font-weight: 300;
         font-size: 16px;
         line-height: 32px;
@@ -20,7 +21,6 @@
 .project {
     background: #212528;
     border-radius: 16px;
-    position: relative;
 
     &__widnow {
         background: #1E1E1E;
@@ -41,12 +41,9 @@
     }
 
     &__gh-logo {
-        position: absolute;
-        display: block;
-        background-image: url(../assets/img/gh-logo.svg);
-        width: 21px;
-        height: 20px;
-        top: 56px;
-        left: 17px;
+        padding: 26px 0 0 17px;
     }
+
+    &__content {}
+
 }
