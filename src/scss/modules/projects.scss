@@ -21,14 +21,21 @@
 .project {
     background: #212528;
     border-radius: 16px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: #808082;
 
-    &__widnow {
-        background: #1E1E1E;
-        height: 40px;
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        padding: 0 0 0 16px;
+    &__grid {
+        padding: 0 16px;
+        display: grid;
+        grid-template-columns: 102px 1fr;
+        column-gap: 8px;
+
+        &--last {
+            padding-bottom: 48px;
+        }
     }
 
     &__dot {
@@ -44,6 +51,30 @@
         padding: 26px 0 0 17px;
     }
 
-    &__content {}
+    &__label {
+        text-align: right;
+        font-weight: normal;
+        font-size: 13px;
 
+        &--color {
+            color: white;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 24px;
+        }
+    }
+
+    &__link {
+        color: #14B5D0;
+    }
+
+    &__widnow {
+        background: #1E1E1E;
+        height: 40px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 16px;
+    }
 }

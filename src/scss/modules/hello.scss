@@ -1,9 +1,10 @@
 .hello {
-  height: 100vh;
+  // min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 86px 16px 88px;
 
   &__img {
     box-sizing: content-box;
@@ -33,14 +34,16 @@
   }
 
   &__contact {
+    display: block;
     text-decoration: none;
     color: white;
-    width: 84%;
+    width: 100%;
     background-color: #4DA8FF;
     text-align: center;
     font-size: 16px;
-    line-height: 34px;
+    line-height: 40px;
     border-radius: 64px;
     font-weight: bold;
+    margin: 0 5px;
   }
 }
