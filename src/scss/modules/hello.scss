@@ -1,36 +1,122 @@
 .hello {
-  // min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 86px 16px 88px;
 
+  @media (min-width: $tablet) {
+    max-width: $tablet;
+    margin: 0 auto;
+  }
+
+  &__bubble {
+    position: relative;
+  }
+
   &__img {
     box-sizing: content-box;
-    border: 12px solid rgb(219, 219, 219);
+    border: 12px solid #F6F9FD;
     border-radius: 50%;
     width: 96px;
     height: 96px;
     margin-bottom: 24px;
+
+    @media(min-width: $desktop) {
+      width: 178px;
+      height: 178px;
+      border: 24px solid #F6F9FD;
+      margin-bottom: 72px;
+    }
+  }
+
+  &__container {
+    display: flex;
   }
 
   &__hand {
     display: none;
+    position: absolute;
+    top: 70px;
+
+    @media(min-width: $desktop) {
+      box-sizing: border-box;
+      display: inline-block;
+      background: $blue;
+      border-radius: 16px;
+      padding: 16px 0px 0px 19px;
+      width: 230px;
+      height: 72px;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 40px;
+      color: white;
+
+      &:after {
+        content: "";
+        display: block;
+        background: url(../assets/img/Speech_cloud.svg);
+        height: 22.26px;
+        width: 17.42px;
+        position: absolute;
+        left: 26px;
+        top: 100%;
+      }
+    }
   }
 }
 
 .hello-header {
   margin: 0 10px 48px 10px;
   text-align: center;
+  position: relative;
+
+  @media(min-width: $desktop) {
+    max-width: 830px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      background: url(../assets/img/{.svg);
+      width: 83.23px;
+      height: 254.88px;
+      position: absolute;
+      top: 0;
+      left: -83.23px;
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      background: url(../assets/img/}.svg);
+      width: 83.23px;
+      height: 254.88px;
+      position: absolute;
+      top: 0;
+      right: -83.23px;
+    }
+  }
+
+
 
   &__title {
+    margin: 0;
     font-size: 26px;
+
+    @media(min-width: $desktop) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &__description {
     color: #425A70;
     font-size: 16px;
+
+    @media(min-width: $desktop) {
+      font-size: 20px;
+      line-height: 40px;
+    }
   }
 
   &__contact {
@@ -43,5 +129,10 @@
     border-radius: 64px;
     font-weight: bold;
     padding: 4px 28px;
+
+    @media(min-width: $desktop) {
+      font-size: 20px;
+      line-height: 40px;
+    }
   }
 }
