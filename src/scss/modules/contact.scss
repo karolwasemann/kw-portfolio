@@ -40,10 +40,10 @@
 .socials {
     padding: 0 0 64px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 
     &__item {
+        margin: 0 12px;
         list-style: none;
     }
 
