@@ -19,20 +19,19 @@
     }
 
     &-links {
-        padding: 0 48px;
+        text-align: center;
     }
 
     &__mail {
-        display: block;
+        display: inline-block;
         text-decoration: none;
         color: white;
         background-color: #4DA8FF;
-        text-align: center;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 40px;
         border-radius: 64px;
         font-weight: bold;
-        margin: 0 5px;
+        padding: 4px 28px;
     }
 
 }
