@@ -6,6 +6,11 @@
         font-size: 36px;
         line-height: 48px;
         text-align: center;
+
+        @media(min-width: $tablet) {
+            font-size: 40px;
+            line-height: 52px;
+        }
     }
 
     &__description {
@@ -15,6 +20,13 @@
         line-height: 32px;
         color: $text;
         margin-bottom: 46px;
+
+        @media(min-width: $tablet) {
+            font-size: 20px;
+            line-height: 36px;
+            margin-bottom: 52px;
+
+        }
     }
 }
 
@@ -26,6 +38,11 @@
     font-size: 13px;
     line-height: 24px;
     color: #808082;
+
+    @media(min-width: $tablet) {
+        font-size: 16px;
+        line-height: 26px;
+    }
 
     &__grid {
         padding: 0 16px;
