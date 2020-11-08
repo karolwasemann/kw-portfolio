@@ -1,5 +1,7 @@
 .projects {
-    padding: 64px 16px 0;
+    padding: 64px 16px 176px;
+    max-width: 1184px;
+    margin: 0 auto;
 
     &__header {
         font-weight: bold;
@@ -10,6 +12,11 @@
         @media(min-width: $tablet) {
             font-size: 40px;
             line-height: 52px;
+        }
+
+        @media(min-width: $desktop) {
+            font-size: 48px;
+            line-height: 56px;
         }
     }
 
@@ -23,10 +30,10 @@
 
         @media(min-width: $tablet) {
             font-size: 20px;
-            line-height: 36px;
+            line-height: 40px;
             margin-bottom: 52px;
-
         }
+
     }
 }
 
@@ -42,6 +49,7 @@
     @media(min-width: $tablet) {
         font-size: 16px;
         line-height: 26px;
+        max-width: 580px;
     }
 
     &__grid {
@@ -52,6 +60,10 @@
 
         &--last {
             padding-bottom: 48px;
+
+            @media(min-width: $desktop) {
+                padding-bottom: 58px;
+            }
         }
     }
 
@@ -104,5 +116,6 @@
 
     @media (min-width: $tablet) {
         grid-template-columns: 1fr 1fr;
+
     }
 }
