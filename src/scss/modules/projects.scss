@@ -91,7 +91,13 @@
     }
 
     &__gh-logo {
-        padding: 26px 0 0 17px;
+        padding: 26px 0 0 18px;
+
+        @media(min-width: $desktop) {
+            height: 21px;
+            width: 21px;
+            padding: 26px 0 24px 48px;
+        }
     }
 
     &__label {
