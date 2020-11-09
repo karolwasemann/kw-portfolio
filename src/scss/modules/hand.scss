@@ -1,0 +1,19 @@
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(50deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+.hand {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+}
