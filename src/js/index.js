@@ -33,6 +33,8 @@ fetch("https://api.github.com/users/karolwasemann/repos")
           <span class="project__label">demo:</span
           ><span
             >&lt;<a
+            target="_blank"
+            rel="noopener noreferrer"
               href="${homepage}"
               title="${name}  - demo"
               class="project__link"
@@ -45,6 +47,8 @@ fetch("https://api.github.com/users/karolwasemann/repos")
           <span class="project__label">github:</span
           ><span
             >&lt;<a
+            target="_blank"
+            rel="noopener noreferrer"
               href="${html_url}"
               title="${name} - demo"
               class="project__link"
