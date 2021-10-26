@@ -1,0 +1,32 @@
+{
+  "name": "boilerplate-projekt",
+  "version": "1.0.0",
+  "description": "Grundsetup für Projekte",
+  "main": "index.js",
+  "scripts": {
+    "start" : "concurrently npm:sass-watch npm:src-watch",
+    "src-watch": "light-server -c light-server.json",
+    "sass-watch": "sass src/scss:src/styles --watch",
+    "build" : "sass src/scss:src/styles",
+    "copy" : "rsync -avr src/ dist --exclude=\"/scss\" ",
+    "clean" : "rm -rf dist && mkdir dist",
+    "publish": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FbW-D03-2/boilerplate-projekt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FbW-D03-2/boilerplate-projekt/issues"
+  },
+  "homepage": "https://github.com/FbW-D03-2/boilerplate-projekt#readme",
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "gh-pages": "^3.2.3",
+    "light-server": "^2.9.1",
+    "sass": "^1.43.3"
+  }
+}
