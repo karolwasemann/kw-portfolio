@@ -1,0 +1,192 @@
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/sky.jpg);
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+    position: relative;
+
+
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr min-content;
+        padding: $font-s;
+        background: rgba(0, 0, 0, .6);
+        height: 20px;
+
+        position: sticky;
+        z-index: 100;
+        top: 0px;
+
+    }
+
+    h2 {
+        font-size: $font-s;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+
+
+    .nav-container {
+        height: 5vh;
+        position: absolute;
+        width: 100%;
+        background: black;
+        display: none;
+        top: 0;
+        right: 0;
+        margin-top: 50px;
+
+
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            li {
+                list-style: none;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: $font-xs;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .toggler {
+        display: block;
+
+    }
+
+    .burger {
+        font-size: $font-xxl + $font-s;
+        line-height: $font-s;
+        background: none;
+        border: none;
+        color: white;
+        justify-self: flex-end;
+    }
+
+
+    figure {
+        width: 80%;
+        align-self: flex-end;
+        margin-top: 2rem;
+        height: 40vh;
+        z-index: 1;
+
+
+        img {
+            width: 80%;
+            max-height: 40vh;
+            margin-left: 2rem;
+            background-color: transparent;
+            clip-path: circle(50% at 50% 50%);
+
+            z-index: 1;
+
+        }
+    }
+
+    .saturn-container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 30%;
+        width: 130px;
+        left: 14%;
+        padding: $font-xxs;
+        border-radius: $font-s;
+        background-color: transparent;
+        color: black;
+        clip-path: circle(31.7% at 23% 17%);
+        animation: myOrbit 10s infinite linear;
+        z-index: 2;
+        transition: all 1s;
+
+        &:hover {
+            animation-play-state: paused;
+            background-color: rgba(230, 230, 230, .5);
+            clip-path: circle(70.7% at 50% 50%);
+
+        }
+
+
+
+        .saturn {
+            margin-bottom: $font-xs;
+
+        }
+
+        .message {
+            font-size: $font-m;
+        }
+    }
+
+    .title {
+        margin: 7rem 2rem;
+        flex-grow: 1;
+        justify-self: flex-end;
+
+        h3 {
+            margin-top: $font-s;
+        }
+
+        .deco {
+            width: 4rem;
+            border-bottom: 3px solid red;
+
+        }
+
+        .deco:nth-child(2) {
+            transform: translate(1.2rem, .8rem);
+        }
+
+    }
+
+    .star {
+        width: 30px;
+        transform: translate(-20vw, 10vh);
+        animation: star-move 5s random(2)+s;
+
+    }
+}
+
+
+@keyframes star-move {
+    from {
+        transform: translate(-20vw, 0) scale(1);
+
+    }
+
+    to {
+        transform: translate(120vw, 70vh) scale(.2);
+
+    }
+
+}
+
+
+
+@keyframes myOrbit {
+    from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
