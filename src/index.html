@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Zen+Kurenaido&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
       integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,59 +15,125 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <h2>Karol W.</h2>
-        <h2><a href="#">Project Request</a></h2>
-        <button class="burger">=</button>
-        <div class="nav-container">
-          <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">skills</a></li>
-            <li><a href="#">project</a></li>
-            <li><a href="#">about me</a></li>
-            <li><a href="#"><i class="fab fa-github"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-          </ul>
+    <div class="wrapper">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+      <header>
+        <nav>
+          <h2>Karol W.</h2>
+          <h2><a href="#">Project Request</a></h2>
+          <button class="burger">=</button>
+          <div class="nav-container">
+            <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="#">skills</a></li>
+              <li><a href="#">project</a></li>
+              <li><a href="#">about me</a></li>
+              <li class="icon"><a href="#"><i class="fab fa-github"></i></a></li>
+              <li class="icon"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
+        </nav> <img class="star" src="./images/shooting-star.png" alt="">
+        <figure>
+          <img src="./images/Weather_icon_-_full_moon.svg" alt="Moon">
+        </figure>
+        <div class="saturn-container">
+          <span class="saturn"><img src="./images/saturn.png" alt=""></span>
+          <span class="message">
+            <p>Welcome! <br> Let's create something together!!!</p>
+          </span>
         </div>
-      </nav> <img class="star" src="./images/shooting-star.png" alt="">
-      <figure>
-        <img src="./images/Weather_icon_-_full_moon.svg" alt="Moon">
-      </figure>
-      <div class="saturn-container">
-        <span class="saturn"><img src="./images/saturn.png" alt=""></span>
-        <span class="message">
-          <p>Welcome! <br> Let's create something together!!!</p>
-        </span>
-      </div>
-      <div class="title">
-        <h1>Karol<br>Wasemann</h1>
-        <div class="deco"></div>
-        <div class="deco"></div>
-        <h3>Web Developer/</h3>
-      </div>
-    </header>
+        <div class="title">
+          <h1>Karol<br>Wasemann</h1>
+          <div class="deco"></div>
+          <div class="deco"></div>
+          <h3>Web Developer/</h3>
+        </div>
+      </header>
+    </div>
     <main>
       <section class="skills">
         <h2>My Skills</h2>
+        <div class="deco"></div>
+        <div class="deco"></div>
         <p>Look on my skills! Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nihil sint dolorem enim
           distinctio fugit deserunt alias quos quae amet</p>
         <figure>
-          <span>Git</span>
-          <span>CSS Animation</span>
-          <span>Github</span>
-          <span>Responsive</span>
-          <span>JS</span>
-          <span>Bootstrap</span>
-          <span>CSS Layout</span>
-          <span>Semantic-HTML</span>
-          <span>Figma</span>
-          <span>SASS</span>
+          <div class="wall">
+            <ul class="train">
+              <li>Git</li>
+              <li>CSS Animation</li>
+              <li></li>
+              <li>Github</li>
+              <li>Responsive</li>
+              <li c></li>
+              <li>Java Script</li>
+              <li>Bootstrap</li>
+              <li></li>
+              <li></li>
+            </ul>
+            <ul class="waterfall">
+              <li></li>
+              <li></li>
+              <li>CSS Layout</li>
+              <li></li>
+              <li></li>
+              <li>Semantic-HTML</li>
+              <li></li>
+              <li></li>
+              <li>Figma</li>
+              <li>SASS</li>
+            </ul>
+          </div>
         </figure>
       </section>
       <section class="dev-time"></section>
-      <section class="project"></section>
-      <section class="about-me"></section>
+      <!-- Project Section -->
+      <section class="projects ">
+        <h2 class="projects__header">My Projects</h2>
+        <div class="deco"></div>
+        <div class="deco"></div>
+        <p class="projects__description"> I started my frontend developer path in 2019. Since then, I’ve built some
+          projects. Here’s the list of the things I’ve done so far. </p>
+        <div class="projects-grid projects-grid--js "></div>
+      </section>
+      <!-- About Me Section -->
+      <section class="about-me">
+        <h2>About Me</h2>
+        <div class="deco"></div>
+        <div class="deco"></div>
+        <article class="who">
+          <h3> Who on earth is Karol Wasemann? </h3>
+          <p>Karol comes from Poland but has lived in Berlin for a long time. He has a bachelor's degree in management
+            but has been fascinated by Web Development for a long time. Currently he is a student at DCI.</p>
+          <img src="./images/albi.jpg" alt="My and dog">
+        </article>
+        <article class="passion">
+          <h3>PASSION</h3>
+          <section>
+            <img src="./images/laptop.png" alt="laptop">
+            <h4>Technology</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, veritatis? Nam nihil voluptas
+              molestias ipsa vero minus, laudantium atque beatae. Quod dolorem ipsam cum illum, iure pariatur harum fuga
+              nostrum.</p>
+          </section>
+          <section>
+            <img src="./images/self-growth.png" alt="superman">
+            <h4>self-development</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel veritatis cumque odit aliquam accusantium
+              praesentium. Quis iusto itaque, magni laudantium, nihil ratione, illo ab et corporis enim alias ipsa!
+              Distinctio!</p>
+          </section>
+          <section>
+            <img src="./images/active.png" alt="activity">
+            <h4>Activity</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus magni molestias
+              laudantium quisquam beatae harum deserunt. Quis perferendis nihil inventore architecto? Iure reiciendis
+              modi voluptatum facere veniam fugiat aspernatur?</p>
+          </section>
+        </article>
+      </section>
     </main>
     <script src="index.js"></script>
   </body>

@@ -1,0 +1,84 @@
+.projects {
+  padding: 64px 16px 56px;
+  background: white;
+  color: black;
+}
+.projects__header {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+}
+.projects__description {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: black;
+  margin: 46px 0;
+}
+
+.project {
+  background: #212528;
+  border-radius: 16px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: whitesmoke;
+  overflow: hidden;
+}
+.project__content {
+  margin: 6px;
+}
+.project__grid {
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 102px 1fr;
+  column-gap: 8px;
+}
+.project__grid--last {
+  padding-bottom: 48px;
+}
+.project__dot {
+  margin: 0 4px 0 0;
+  border-radius: 50%;
+  display: block;
+  height: 8px;
+  width: 8px;
+  background: #807979;
+}
+.project__gh-logo {
+  padding: 26px 0 0 18px;
+  color: white;
+  font-size: 4rem;
+}
+.project__label {
+  text-align: right;
+  font-weight: normal;
+  font-size: 13px;
+}
+.project__label--color {
+  color: whitesmoke;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 24px;
+}
+.project__link {
+  color: #14B5D0;
+}
+.project__window {
+  background: #1E1E1E;
+  height: 40px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 16px;
+}
+
+.projects-grid {
+  display: grid;
+  column-gap: 24px;
+  row-gap: 24px;
+}
+
+/*# sourceMappingURL=project.css.map */

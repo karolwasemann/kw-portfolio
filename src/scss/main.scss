@@ -1,9 +1,28 @@
 @import "variables.scss";
+@import "parallax.scss";
 @import 'header.scss';
-@import "main-sec";
+@import "skills.scss";
+@import "project.scss";
+@import "about-me.scss";
 
 * {
     margin: 0;
     padding: 0;
     // box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono',
+        monospace;
+
+
+    .deco {
+        width: 4rem;
+        border-bottom: 3px solid red;
+
+    }
+
+    .deco:nth-child(2) {
+        transform: translate(1.2rem, .8rem);
+    }
 }

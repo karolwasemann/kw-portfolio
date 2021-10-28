@@ -1,0 +1,135 @@
+@import "variables.scss";
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    background: white;
+    color: black;
+
+    .skills {
+        margin: 0 auto $font-xl auto;
+        // overflow: hidden;
+
+        width: 80%;
+        min-height: 70vh;
+        border-radius: $font-xl;
+        padding: $font-xl $font-xs;
+        // background-image: linear-gradient(120deg, #eb4f56, #9d66e9);
+
+        h2 {
+            font-size: $font-xxl;
+
+        }
+
+        p {
+            margin-top: $font-xxl;
+        }
+
+        figure {
+            width: 254px;
+            margin: 5rem auto;
+            height: 200px;
+            background-image: url(../images/monitorr.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+
+            .wall {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: black;
+                width: 250px;
+                height: 146px;
+                overflow: hidden;
+
+            }
+
+            ul {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                height: 146px;
+
+                &.train {
+                    transform: translateX(250px);
+                    animation: train 15s linear infinite;
+                }
+
+                &.waterfall {
+                    flex-direction: column;
+                    height: 1460px;
+                    transform: translateY(146px);
+                    animation: waterfall 15s linear infinite;
+                }
+
+                li {
+                    width: 250px;
+                    height: 146px;
+                    font-size: 28px;
+                    background: transparent;
+                    color: whitesmoke;
+                    border-radius: .2rem;
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+            }
+
+
+        }
+    }
+}
+
+
+
+@keyframes train {
+    from {
+        transform: translateX(250px);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes waterfall {
+    from {
+        transform: translateY(146px);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+
+
+// @mixin add-move-animation {
+//     animation-name: move-txt;
+//     animation-timing-function: linear;
+//     animation-fill-mode: forwards;
+//     animation-direction: alternate;
+//     // animation-iteration-count: infinite;
+// }
+
+// @for $i from 1 through 10 {
+
+//     li:nth-child(#{$i}) {
+//         animation-duration: $i+s;
+
+//         // @if (($i % 3)==0) {
+//         //     transform: translateY(-100% *$i);
+//         //     animation-duration: $i+s;
+//         // }
+
+//         @include add-move-animation();
+//     }
+
+
+// }

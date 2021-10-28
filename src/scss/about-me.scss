@@ -1,0 +1,97 @@
+@mixin tags($top:10px) {
+    &::after {
+        content: "/>";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        height: $font-l;
+        line-height: $font-xxl;
+        font-size: $font-xxl;
+        top: $top;
+        right: -10px;
+        background: white;
+    }
+
+    &::before {
+        content: "<";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        height: $font-l;
+        line-height: $font-xxl;
+        font-size: $font-xxl;
+        top: $top;
+        left: -10px;
+    }
+}
+
+
+.about-me {
+    // background: blanchedalmond;
+    padding: 0 $font-xxl;
+    font-family: 'Zen Kurenaido',
+        sans-serif;
+
+    h2 {
+        font-size: $font-xxl;
+    }
+
+    .who {
+        margin-top: $font-xxl;
+        text-align: center;
+
+
+        h3 {
+            font-size: $font-l;
+            line-height: $font-xxl;
+            width: 300px;
+            margin: 0 auto;
+            position: relative;
+            @include tags;
+        }
+
+        p {
+            font-size: $font-m;
+            margin: $font-m 0 0 0;
+            text-align: left;
+        }
+
+        img {
+            margin: $font-xl 0 60px;
+            width: 100%;
+            box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.1),
+                0 6px 20px -3px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .passion {
+        margin-top: $font-m;
+
+        h3 {
+            font-size: $font-l;
+            line-height: $font-xxl;
+            width: 200px;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+            @include tags(-6px);
+        }
+
+        section {
+            margin-top: $font-xl;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                margin: $font-m auto;
+
+            }
+
+            h4 {
+                align-self: center;
+                font-size: $font-l;
+                margin-bottom: $font-m;
+            }
+        }
+    }
+}
