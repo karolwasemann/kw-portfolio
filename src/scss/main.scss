@@ -11,6 +11,10 @@
     // box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto Mono',
         monospace;
@@ -24,5 +28,32 @@ body {
 
     .deco:nth-child(2) {
         transform: translate(1.2rem, .8rem);
+    }
+}
+
+
+.btn-container {
+    text-align: center;
+    margin: 2rem 0 4rem;
+
+    button {
+
+        border: none;
+        font-size: $font-xl;
+        padding: $font-s $font-xxl;
+        background-image: url("../images/cosmos.jpg");
+        background-position: center;
+        background-size: cover;
+        border-radius: 1rem;
+        color: whitesmoke;
+        box-shadow: 2px 2px 5px 1px black;
+
+
+
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: bold;
+        }
     }
 }

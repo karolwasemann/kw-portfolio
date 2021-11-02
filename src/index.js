@@ -5,10 +5,15 @@ console.log("ss 🚀");
 
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav-container");
+const span1 = document.querySelector(".span1");
+const span2 = document.querySelector(".span2");
+
 
 burger.addEventListener("click", function () {
-    nav.classList.toggle('toggler');
-    console.log("ga;")
+  nav.classList.toggle('toggler');
+  span1.classList.toggle("move1");
+  span2.classList.toggle("move2");
+  console.log("ga;")
 
 })
 
@@ -17,20 +22,20 @@ burger.addEventListener("click", function () {
 
 
 fetch("https://api.github.com/users/karolwasemann/repos")
-    .then((res) => res.json())
-    .then((res) => {
-        const container = document.querySelector(".projects-grid--js");
+  .then((res) => res.json())
+  .then((res) => {
+    const container = document.querySelector(".projects-grid--js");
 
 
-        for (let repo of res) {
-            const {
-                description,
-                homepage,
-                html_url,
-                name
-            } = repo;
+    for (let repo of res) {
+      const {
+        description,
+        homepage,
+        html_url,
+        name
+      } = repo;
 
-            const template = ` <article class="project">
+      const template = ` <article class="project">
       <div class="project__window">
         <span class="project__dot"></span>
         <span class="project__dot"></span>
@@ -80,12 +85,12 @@ fetch("https://api.github.com/users/karolwasemann/repos")
         </p>
       </div>
     </article>`;
-            if (description) {
-                const check = description.split(" ").includes("#GO");
-                if (check) {
-                    container.innerHTML += template;
-                }
-            }
+      if (description) {
+        const check = description.split(" ").includes("#GO");
+        if (check) {
+          container.innerHTML += template;
         }
-    })
-    .catch((e) => console.log(e));
+      }
+    }
+  })
+  .catch((e) => console.log(e));

@@ -1,7 +1,11 @@
 .projects {
   padding: 64px 16px 56px;
-  background: white;
   color: black;
+}
+@media screen and (min-width: 768px) {
+  .projects {
+    margin: 0 3rem;
+  }
 }
 .projects__header {
   font-weight: bold;
@@ -10,7 +14,7 @@
 }
 .projects__description {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 32px;
   color: black;
   margin: 46px 0;
@@ -26,13 +30,25 @@
   color: whitesmoke;
   overflow: hidden;
 }
+@media screen and (min-width: 768px) {
+  .project {
+    width: 450px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+}
 .project__content {
   margin: 6px;
 }
+@media screen and (min-width: 768px) {
+  .project__content {
+    margin: 0 4rem;
+  }
+}
 .project__grid {
-  padding: 0 16px;
+  padding: 0 10px;
   display: grid;
-  grid-template-columns: 102px 1fr;
+  grid-template-columns: min-content 1fr;
   column-gap: 8px;
 }
 .project__grid--last {
@@ -49,19 +65,34 @@
 .project__gh-logo {
   padding: 26px 0 0 18px;
   color: white;
-  font-size: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .project__gh-logo {
+    width: 30px;
+  }
 }
 .project__label {
   text-align: right;
   font-weight: normal;
   font-size: 13px;
 }
+@media screen and (min-width: 768px) {
+  .project__label {
+    font-size: 15px;
+    margin-right: 8px;
+  }
+}
 .project__label--color {
   color: whitesmoke;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 24px;
+}
+@media screen and (min-width: 768px) {
+  .project__label--color {
+    font-size: 15px;
+  }
 }
 .project__link {
   color: #14B5D0;
@@ -79,6 +110,13 @@
   display: grid;
   column-gap: 24px;
   row-gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=project.css.map */

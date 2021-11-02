@@ -1,7 +1,10 @@
 .projects {
     padding: 64px 16px 56px;
-    background: white;
     color: black;
+
+    @media screen and (min-width:768px) {
+        margin: 0 3rem;
+    }
 
 
 
@@ -10,20 +13,17 @@
         font-size: 36px;
         line-height: 48px;
 
-
-
     }
 
     &__description {
         font-weight: 300;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 32px;
         color: black;
         margin: 46px 0;
-
-
-
     }
+
+
 }
 
 .project {
@@ -36,15 +36,27 @@
     color: whitesmoke;
     overflow: hidden;
 
+    // max-width: 100%;
+
+    @media screen and (min-width: 768px) {
+        width: 450px;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
     &__content {
         margin: 6px;
+
+        @media screen and (min-width: 768px) {
+            margin: 0 4rem;
+        }
     }
 
 
     &__grid {
-        padding: 0 16px;
+        padding: 0 10px;
         display: grid;
-        grid-template-columns: 102px 1fr;
+        grid-template-columns: min-content 1fr;
         column-gap: 8px;
 
 
@@ -68,7 +80,10 @@
     &__gh-logo {
         padding: 26px 0 0 18px;
         color: white;
-        font-size: 4rem;
+
+        @media screen and (min-width: 768px) {
+            width: 30px;
+        }
 
     }
 
@@ -77,12 +92,21 @@
         font-weight: normal;
         font-size: 13px;
 
+        @media screen and (min-width:768px) {
+            font-size: 15px;
+            margin-right: 8px;
+        }
+
         &--color {
             color: whitesmoke;
             font-style: normal;
             font-weight: bold;
-            font-size: 10px;
+            font-size: 13px;
             line-height: 24px;
+
+            @media screen and (min-width:768px) {
+                font-size: 15px;
+            }
         }
     }
 
@@ -98,6 +122,8 @@
         align-items: center;
         padding: 0 0 0 16px;
     }
+
+
 }
 
 
@@ -105,6 +131,10 @@
     display: grid;
     column-gap: 24px;
     row-gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
 
-
+    @media screen and (min-width:1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
 }

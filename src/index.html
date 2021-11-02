@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <div class="wrapper">
+    <div id="start" class="wrapper">
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
@@ -23,13 +23,16 @@
         <nav>
           <h2>Karol W.</h2>
           <h2><a href="#">Project Request</a></h2>
-          <button class="burger">=</button>
+          <button class="burger">
+            <span class="span1 "></span>
+            <span class="span2 "></span>
+          </button>
           <div class="nav-container">
             <ul>
-              <li><a href="#">home</a></li>
-              <li><a href="#">skills</a></li>
-              <li><a href="#">project</a></li>
-              <li><a href="#">about me</a></li>
+              <li><a href="#start">home</a></li>
+              <li><a href="#skills">skills</a></li>
+              <li><a href="#project">project</a></li>
+              <li><a href="#about">about me</a></li>
               <li class="icon"><a href="#"><i class="fab fa-github"></i></a></li>
               <li class="icon"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
@@ -50,47 +53,80 @@
           <div class="deco"></div>
           <h3>Web Developer/</h3>
         </div>
+        <ul class="slider">
+          <li><a href="#start"></a></li>
+          <li><a href="#skills"></a></li>
+          <li><a href="#project"></a></li>
+          <li><a href="#about"></a></li>
+        </ul>
       </header>
     </div>
     <main>
-      <section class="skills">
-        <h2>My Skills</h2>
-        <div class="deco"></div>
-        <div class="deco"></div>
-        <p>Look on my skills! Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nihil sint dolorem enim
-          distinctio fugit deserunt alias quos quae amet</p>
-        <figure>
-          <div class="wall">
-            <ul class="train">
-              <li>Git</li>
-              <li>CSS Animation</li>
-              <li></li>
-              <li>Github</li>
-              <li>Responsive</li>
-              <li c></li>
-              <li>Java Script</li>
-              <li>Bootstrap</li>
-              <li></li>
-              <li></li>
-            </ul>
-            <ul class="waterfall">
-              <li></li>
-              <li></li>
-              <li>CSS Layout</li>
-              <li></li>
-              <li></li>
-              <li>Semantic-HTML</li>
-              <li></li>
-              <li></li>
-              <li>Figma</li>
-              <li>SASS</li>
-            </ul>
-          </div>
-        </figure>
+      <section id="skills" class="skills">
+        <section class="skill anima">
+          <h2>My Skills</h2>
+          <div class="deco"></div>
+          <div class="deco"></div>
+          <p>Look on my skills! Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nihil sint dolorem enim
+            distinctio fugit deserunt alias quos quae amet</p>
+          <figure>
+            <div class="wall">
+              <ul class="train">
+                <li>Git</li>
+                <li>CSS Animation</li>
+                <li></li>
+                <li>Github</li>
+                <li>Responsive</li>
+                <li c></li>
+                <li>Java Script</li>
+                <li>Bootstrap</li>
+                <li></li>
+                <li></li>
+              </ul>
+              <ul class="waterfall">
+                <li></li>
+                <li></li>
+                <li>CSS Layout</li>
+                <li></li>
+                <li></li>
+                <li>Semantic-HTML</li>
+                <li></li>
+                <li></li>
+                <li>Figma</li>
+                <li>SASS</li>
+              </ul>
+            </div>
+          </figure>
+        </section>
+        <section class="skill">
+          <h2>Clean code</h2>
+          <div class="deco"></div>
+          <div class="deco"></div>
+          <code>
+            <pre>
+<span>&ltul&gt</span>
+
+ <span>&ltli&gt</span> Semantic HTML. <span>&lt/li&gt</span>
+
+<span> &ltli&gt</span> Class naming system. <span>&lt/li&gt</span>
+  
+<span> &ltli&gt</span> Performance optimized. <span>&lt/li&gt</span>
+
+<span>&lt/ul&gt</span>
+
+  </pre>
+          </code>
+        </section>
+        <section class="skill ">
+          <h2>Lightning-fast</h2>
+          <div class="deco"></div>
+          <div class="deco"></div>
+          <p>Websites tailored to the highest and latest standards.</p>
+          <span class="shot"><img src="./images/shot.png" alt=""></span>
+        </section>
       </section>
-      <section class="dev-time"></section>
       <!-- Project Section -->
-      <section class="projects ">
+      <section id="project" class="projects ">
         <h2 class="projects__header">My Projects</h2>
         <div class="deco"></div>
         <div class="deco"></div>
@@ -98,8 +134,10 @@
           projects. Here’s the list of the things I’ve done so far. </p>
         <div class="projects-grid projects-grid--js "></div>
       </section>
+      <div class="btn-container"><button><a target="_blank"
+            href="https://github.com/karolwasemann?tab=repositories">Show more</a></button></div>
       <!-- About Me Section -->
-      <section class="about-me">
+      <section id="about" class="about-me">
         <h2>About Me</h2>
         <div class="deco"></div>
         <div class="deco"></div>
@@ -135,6 +173,8 @@
         </article>
       </section>
     </main>
+    <footer>
+    </footer>
     <script src="index.js"></script>
   </body>
 

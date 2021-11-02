@@ -28,7 +28,9 @@
 
 .about-me {
     // background: blanchedalmond;
-    padding: 0 $font-xxl;
+    border-top: 2px solid black;
+
+    padding: 2rem $font-xxl;
     font-family: 'Zen Kurenaido',
         sans-serif;
 
@@ -44,10 +46,9 @@
         h3 {
             font-size: $font-l;
             line-height: $font-xxl;
-            width: 300px;
+            // width: 300px;
             margin: 0 auto;
-            position: relative;
-            @include tags;
+            // @include tags;
         }
 
         p {
@@ -61,20 +62,29 @@
             width: 100%;
             box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.1),
                 0 6px 20px -3px rgba(0, 0, 0, 0.2);
+
+            @media screen and (min-width: 768px) {
+                width: 50%;
+            }
         }
     }
 
     .passion {
         margin-top: $font-m;
 
+
+
         h3 {
             font-size: $font-l;
             line-height: $font-xxl;
             width: 200px;
             margin: 0 auto;
-            position: relative;
             text-align: center;
-            @include tags(-6px);
+
+            // @include tags(-6px);
+            @media screen and (min-width: 768px) {
+                font-size: $font-xl;
+            }
         }
 
         section {
@@ -91,6 +101,16 @@
                 align-self: center;
                 font-size: $font-l;
                 margin-bottom: $font-m;
+
+                @media screen and (min-width: 768px) {
+                    font-size: $font-xl;
+                }
+            }
+
+            p {
+                @media screen and (min-width: 768px) {
+                    font-size: $font-m;
+                }
             }
         }
     }
