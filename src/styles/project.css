@@ -1,16 +1,24 @@
 .projects {
+  position: relative;
   padding: 64px 16px 56px;
   color: black;
+  background: whitesmoke;
+  background: linear-gradient(135deg, whitesmoke 6%, #f5eded 14%, #d0cbc6 25%, #aaa89e 43%, #5f634f 64%);
 }
 @media screen and (min-width: 768px) {
   .projects {
-    margin: 0 3rem;
+    padding: 64px 56px 56px;
   }
 }
 .projects__header {
   font-weight: bold;
   font-size: 36px;
   line-height: 48px;
+}
+@media screen and (min-width: 1024px) {
+  .projects__header {
+    font-size: 3rem;
+  }
 }
 .projects__description {
   font-weight: 300;

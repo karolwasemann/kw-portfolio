@@ -1,9 +1,47 @@
+@mixin form {
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    position: absolute;
+    padding: 2rem;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    z-index: 6;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12rem;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: clip-path .3s;
+    align-content: start;
+    font-size: 1.2rem;
+}
+
+@mixin btn {
+    border: none;
+    background: none;
+    color: #3997f7;
+    font-size: $font-l;
+    width: 100%;
+
+    @media screen and (min-width:768px) {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    @media screen and (min-width:1024px) {
+        margin-top: 2rem;
+        font-size: 3rem;
+    }
+}
+
+
 header {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    // background-image: url(../images/sky.jpg);
-    // background-size: cover;
     color: white;
     overflow: hidden;
     position: relative;
@@ -12,7 +50,7 @@ header {
 
     nav {
         display: grid;
-        grid-template-columns: 1fr 1fr min-content;
+        grid-template-columns: 1fr 2fr min-content;
         padding: $font-s;
         background: rgba(0, 0, 0, .8);
 
@@ -21,7 +59,246 @@ header {
         top: 0px;
         left: 0;
         right: 0;
-        z-index: 3;
+        z-index: 4;
+
+        @media screen and (min-width: 768px) {
+            padding: $font-s $font-l;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding: $font-s $font-xl;
+        }
+
+        .request {
+            a {
+                color: #3997f7;
+                transition: color .3s;
+
+                &:hover {
+                    color: #80bfff;
+
+                }
+            }
+        }
+    }
+
+
+
+    .sec-request {
+        box-sizing: border-box;
+        position: absolute;
+        padding: 2rem;
+        height: 100vh;
+        width: 100vw;
+        background: black;
+        z-index: 6;
+        display: flex;
+        flex-wrap: wrap;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+
+        transition: clip-path .3s;
+
+
+
+        button#cancel {
+            position: fixed;
+            right: 1rem;
+            border: none;
+            background: none;
+            color: white;
+            flex-basis: 100%;
+            text-align: right;
+            align-self: start;
+            font-size: $font-m;
+            z-index: 100;
+
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.8rem;
+
+
+            img {
+                max-height: 30vh;
+            }
+
+            h3 {
+                font-size: 2rem;
+
+                @media screen and (min-width:1024px) {
+                    font-size: 3rem;
+                }
+            }
+
+            p {
+                @media screen and (min-width:1024px) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            button {
+
+                @include btn;
+
+
+            }
+        }
+
+
+
+        &-service {
+
+            @include form;
+
+            h3 {
+                margin: 1rem 0;
+
+                @media screen and (min-width:1024px) {
+                    font-size: 3rem;
+                }
+            }
+
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin: 2rem 0;
+                width: 100%;
+
+                label {
+                    border: 2px solid hsla(0, 0%, 53.3%, .2);
+                    width: 100%;
+                    background: #1d1d1f;
+                    border-radius: .4rem;
+                    padding: .4rem 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input {
+                        background-color: #1d1d1f;
+                    }
+
+                    @media screen and (min-width:768px) {
+                        width: 70%;
+                        margin: 0 auto;
+                    }
+
+                    @media screen and (min-width:1024px) {
+                        font-size: 1.8rem;
+                    }
+                }
+
+
+            }
+
+            .next {
+
+                @include btn;
+
+            }
+        }
+
+        &-des {
+
+            @include form;
+            gap: 3rem;
+
+
+            h3 {
+                @media screen and (min-width:1024px) {
+                    font-size: 2.6rem;
+                }
+            }
+
+            form {
+                width: 100%;
+
+
+
+                textarea {
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 160px;
+                    padding: 1rem;
+                    outline-color: #3997f7;
+                    background-color: #1d1d1f;
+                    color: white;
+                    font-size: .8rem;
+
+                    @media screen and (min-width:768px) {
+                        display: block;
+                        width: 70%;
+                        margin: 0 auto;
+                        font-style: 1.2rem;
+                        height: 240px;
+                    }
+
+                    @media screen and (min-width:1024px) {
+                        font-size: 1.4rem;
+                        height: 300px;
+
+                    }
+                }
+            }
+
+            .next2 {
+
+                @include btn;
+
+            }
+        }
+
+        &-contact {
+
+
+            @include form;
+            gap: 2rem;
+
+            h3 {
+                width: 100%;
+                text-align: center;
+
+                @media screen and (min-width:1024px) {
+                    font-size: 2.6rem;
+                }
+
+            }
+
+            form {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    margin: .5rem 0 1.6rem;
+                    box-sizing: border-box;
+                    padding: .4rem;
+                    font-size: 1rem;
+
+
+                }
+
+                @media screen and (min-width:768px) {
+                    display: block;
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .submit {
+
+            @include btn;
+            width: 100%;
+
+        }
+    }
+
+    .open {
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 
     }
 
@@ -49,10 +326,12 @@ header {
         position: absolute;
         width: 100vw;
         background: rgba(0, 0, 0, .85);
-        display: none;
+        // display: none;
         top: 0;
         right: 0;
         margin-top: 53px;
+        clip-path: circle(0.3% at 100% 0);
+        transition: clip-path .5s;
 
 
 
@@ -88,7 +367,8 @@ header {
     }
 
     .toggler {
-        display: block;
+        // display: block;
+        clip-path: circle(141.2% at 100% 0);
 
     }
 
@@ -138,12 +418,12 @@ header {
 
         .move1 {
 
-            transform: rotate(25deg);
+            transform: rotate(35deg);
         }
 
 
         .move2 {
-            transform: rotate(-25deg);
+            transform: rotate(-35deg);
         }
     }
 
@@ -170,10 +450,7 @@ header {
                 max-height: 45vh;
             }
 
-            @media screen and (min-width: 1024px) {
-                width: 80vw;
-                max-height: 60vh;
-            }
+
 
         }
     }
@@ -189,7 +466,7 @@ header {
         border-radius: $font-s;
         background-color: transparent;
         color: black;
-        clip-path: circle(28.7% at 23% 17%);
+        clip-path: circle(18.7% at 16% 10%);
         animation: myOrbit 10s infinite linear;
         z-index: 2;
         transition: all 1s;
@@ -218,7 +495,7 @@ header {
     }
 
     .title {
-        margin: 7rem 2rem;
+        margin: 5rem 2rem;
         flex-grow: 1;
         justify-self: flex-end;
 
@@ -248,7 +525,7 @@ header {
     }
 
     .slider {
-        margin-bottom: 1rem;
+        padding-bottom: 2rem;
         display: flex;
         justify-content: center;
 

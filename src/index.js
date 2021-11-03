@@ -13,9 +13,59 @@ burger.addEventListener("click", function () {
   nav.classList.toggle('toggler');
   span1.classList.toggle("move1");
   span2.classList.toggle("move2");
-  console.log("ga;")
+})
+
+
+// Project request
+const request_btn = document.querySelector(".request");
+const request_sec = document.querySelector(".sec-request");
+
+const cancel = document.getElementById("cancel")
+
+
+request_btn.addEventListener("click", function () {
+  request_sec.classList.add("open");
+
+
+});
+
+cancel.addEventListener("click", function () {
+  request_sec.classList.remove('open');
+  sec_request_service.classList.remove("open");
+  sec_request_des.classList.remove("open");
+  sec_request_contact.classList.remove("open");
 
 })
+
+
+// start
+
+const btn_start = document.querySelector(".start");
+const sec_request_service = document.querySelector(".sec-request-service");
+const sec_request_des = document.querySelector(".sec-request-des");
+const sec_request_contact = document.querySelector(".sec-request-contact");
+
+
+
+btn_start.addEventListener("click", function () {
+  sec_request_service.classList.add("open");
+
+});
+
+const btn_next = document.querySelector(".next");
+const btn_next2 = document.querySelector(".next2");
+
+
+
+btn_next.addEventListener("click", function () {
+  sec_request_des.classList.add("open");
+
+});
+
+btn_next2.addEventListener("click", function () {
+  sec_request_contact.classList.add("open");
+
+});
 
 
 // API

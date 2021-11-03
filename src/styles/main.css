@@ -1,6 +1,6 @@
 .wrapper {
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   color: white;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   background-repeat: repeat;
@@ -18,7 +18,7 @@
 #stars:after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 200vh;
   width: 1px;
   height: 1px;
   background: transparent;
@@ -54,7 +54,7 @@
 #stars3:after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 100vh;
   width: 2px;
   height: 2px;
   background: transparent;
@@ -79,14 +79,318 @@ header {
 }
 header nav {
   display: grid;
-  grid-template-columns: 1fr 1fr min-content;
+  grid-template-columns: 1fr 2fr min-content;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0px;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 4;
+}
+@media screen and (min-width: 768px) {
+  header nav {
+    padding: 1rem 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header nav {
+    padding: 1rem 1.8rem;
+  }
+}
+header nav .request a {
+  color: #3997f7;
+  transition: color 0.3s;
+}
+header nav .request a:hover {
+  color: #80bfff;
+}
+header .sec-request {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 2rem;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: clip-path 0.3s;
+}
+header .sec-request button#cancel {
+  position: fixed;
+  right: 1rem;
+  border: none;
+  background: none;
+  color: white;
+  flex-basis: 100%;
+  text-align: right;
+  align-self: start;
+  font-size: 1.2rem;
+  z-index: 100;
+}
+header .sec-request .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+header .sec-request .wrap img {
+  max-height: 30vh;
+}
+header .sec-request .wrap h3 {
+  font-size: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request .wrap h3 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request .wrap p {
+    font-size: 1.6rem;
+  }
+}
+header .sec-request .wrap button {
+  border: none;
+  background: none;
+  color: #3997f7;
+  font-size: 1.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  header .sec-request .wrap button {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request .wrap button {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+}
+header .sec-request-service {
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  position: absolute;
+  padding: 2rem;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12rem;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: clip-path 0.3s;
+  align-content: start;
+  font-size: 1.2rem;
+}
+header .sec-request-service h3 {
+  margin: 1rem 0;
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request-service h3 {
+    font-size: 3rem;
+  }
+}
+header .sec-request-service form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+header .sec-request-service form label {
+  border: 2px solid rgba(136, 136, 136, 0.2);
+  width: 100%;
+  background: #1d1d1f;
+  border-radius: 0.4rem;
+  padding: 0.4rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .sec-request-service form label input {
+  background-color: #1d1d1f;
+}
+@media screen and (min-width: 768px) {
+  header .sec-request-service form label {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request-service form label {
+    font-size: 1.8rem;
+  }
+}
+header .sec-request-service .next {
+  border: none;
+  background: none;
+  color: #3997f7;
+  font-size: 1.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  header .sec-request-service .next {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request-service .next {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+}
+header .sec-request-des {
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  position: absolute;
+  padding: 2rem;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12rem;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: clip-path 0.3s;
+  align-content: start;
+  font-size: 1.2rem;
+  gap: 3rem;
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request-des h3 {
+    font-size: 2.6rem;
+  }
+}
+header .sec-request-des form {
+  width: 100%;
+}
+header .sec-request-des form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 160px;
+  padding: 1rem;
+  outline-color: #3997f7;
+  background-color: #1d1d1f;
+  color: white;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  header .sec-request-des form textarea {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    font-style: 1.2rem;
+    height: 240px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request-des form textarea {
+    font-size: 1.4rem;
+    height: 300px;
+  }
+}
+header .sec-request-des .next2 {
+  border: none;
+  background: none;
+  color: #3997f7;
+  font-size: 1.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  header .sec-request-des .next2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request-des .next2 {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+}
+header .sec-request-contact {
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  position: absolute;
+  padding: 2rem;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12rem;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: clip-path 0.3s;
+  align-content: start;
+  font-size: 1.2rem;
+  gap: 2rem;
+}
+header .sec-request-contact h3 {
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request-contact h3 {
+    font-size: 2.6rem;
+  }
+}
+header .sec-request-contact form {
+  width: 100%;
+}
+header .sec-request-contact form input {
+  width: 100%;
+  margin: 0.5rem 0 1.6rem;
+  box-sizing: border-box;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  header .sec-request-contact form {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+header .sec-request .submit {
+  border: none;
+  background: none;
+  color: #3997f7;
+  font-size: 1.5rem;
+  width: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  header .sec-request .submit {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .sec-request .submit {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+}
+header .open {
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 }
 header h2 {
   font-size: 1rem;
@@ -110,10 +414,11 @@ header .nav-container {
   position: absolute;
   width: 100vw;
   background: rgba(0, 0, 0, 0.85);
-  display: none;
   top: 0;
   right: 0;
   margin-top: 53px;
+  clip-path: circle(0.3% at 100% 0);
+  transition: clip-path 0.5s;
 }
 header .nav-container ul {
   display: flex;
@@ -139,7 +444,7 @@ header .nav-container ul li a {
   font-weight: bold;
 }
 header .toggler {
-  display: block;
+  clip-path: circle(141.2% at 100% 0);
 }
 header .burger {
   border: none;
@@ -180,10 +485,10 @@ header .burger .span2 {
   }
 }
 header .burger .move1 {
-  transform: rotate(25deg);
+  transform: rotate(35deg);
 }
 header .burger .move2 {
-  transform: rotate(-25deg);
+  transform: rotate(-35deg);
 }
 header figure {
   width: 80%;
@@ -204,12 +509,6 @@ header figure img {
     max-height: 45vh;
   }
 }
-@media screen and (min-width: 1024px) {
-  header figure img {
-    width: 80vw;
-    max-height: 60vh;
-  }
-}
 header .saturn-container {
   display: flex;
   flex-direction: column;
@@ -221,7 +520,7 @@ header .saturn-container {
   border-radius: 1rem;
   background-color: transparent;
   color: black;
-  clip-path: circle(28.7% at 23% 17%);
+  clip-path: circle(18.7% at 16% 10%);
   animation: myOrbit 10s infinite linear;
   z-index: 2;
   transition: all 1s;
@@ -243,7 +542,7 @@ header .saturn-container .message {
   font-size: 1.2rem;
 }
 header .title {
-  margin: 7rem 2rem;
+  margin: 5rem 2rem;
   flex-grow: 1;
   justify-self: flex-end;
 }
@@ -258,7 +557,7 @@ header .title h3 {
 header .star {
   width: 30px;
   transform: translate(-20vw, 10vh);
-  animation: star-move 5s 2s;
+  animation: star-move 5s 1s;
 }
 @media screen and (min-width: 768px) {
   header .star {
@@ -266,7 +565,7 @@ header .star {
   }
 }
 header .slider {
-  margin-bottom: 1rem;
+  padding-bottom: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -311,16 +610,29 @@ header .slider li a:hover {
   }
 }
 main {
-  padding-top: 2rem;
   min-height: 100vh;
-  background: white;
   color: black;
   background: whitesmoke;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main .skills {
+  padding: 2rem 1rem;
 }
 @media screen and (min-width: 1024px) {
   main .skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+main .skills h2 {
+  margin-top: 2rem;
+  font-size: 2.2rem;
+}
+@media screen and (min-width: 1024px) {
+  main .skills h2 {
+    font-size: 3rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -328,10 +640,20 @@ main {
     grid-column: 1/3;
   }
 }
+@media screen and (min-width: 1024px) {
+  main .code {
+    grid-column: 1/2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .lightning {
+    grid-column: 2/3;
+  }
+}
 main .skill {
-  margin: 0 auto 2rem;
+  margin: 3rem auto;
   background: #fefefe;
-  width: 80%;
+  width: 90%;
   border-radius: 1.8rem;
   padding: 1.8rem 1rem;
 }
@@ -340,20 +662,26 @@ main .skill {
     padding: 2.2rem 1.8rem;
   }
 }
-main .skill h2 {
-  font-size: 2.2rem;
+main .skill h3 {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  main .skill h3 {
+    font-size: 1.5rem;
+  }
 }
 main .skill p {
-  margin-top: 2.2rem;
+  margin-top: 1.8rem;
 }
 main .skill figure {
   width: 254px;
-  margin: 5rem auto;
+  margin: 0;
   height: 200px;
   background-image: url(../images/monitorr.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
+  margin: 5rem auto;
 }
 @media screen and (min-width: 768px) {
   main .skill figure {
@@ -362,7 +690,7 @@ main .skill figure {
 }
 @media screen and (min-width: 1024px) {
   main .skill figure {
-    transform: scale(1.8);
+    transform: scale(2);
     margin: 10rem auto;
   }
 }
@@ -372,7 +700,7 @@ main .skill figure .wall {
   left: 0;
   background: black;
   width: 250px;
-  height: 146px;
+  height: 144px;
   overflow: hidden;
 }
 main .skill figure ul {
@@ -406,19 +734,24 @@ main .skill figure ul li {
   justify-content: center;
   align-items: center;
 }
+main .cool {
+  background: #d9d7d7;
+  background: linear-gradient(122deg, #d9d7d7 28%, #9b9a9a 63%, rgba(173, 173, 173, 0.7) 74%);
+  color: black;
+}
 main pre {
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-size: 0.8rem;
 }
 @media screen and (min-width: 768px) {
   main pre {
-    font-size: 1.5rem;
-    margin-left: 2rem;
+    font-size: 1rem;
+    margin-left: 4rem;
   }
 }
 @media screen and (min-width: 1024px) {
   main pre {
-    font-size: 1.8rem;
+    margin-top: 5rem;
   }
 }
 main pre span {
@@ -427,13 +760,7 @@ main pre span {
 }
 @media screen and (min-width: 768px) {
   main pre span {
-    font-size: 1.5rem;
-    margin-left: 2rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  main pre span {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 }
 main span.shot {
@@ -450,7 +777,7 @@ main span.shot img {
   transition: transform 0.3s;
 }
 main span.shot:hover img {
-  transform: translate(-240px, 50px) scaleX(2) scaleY(1.8);
+  transform: translate(-60px, 30px) scale(1.6);
 }
 
 @keyframes train {
@@ -463,25 +790,33 @@ main span.shot:hover img {
 }
 @keyframes waterfall {
   from {
-    transform: translateY(146px);
+    transform: translateY(144px);
   }
   to {
     transform: translateY(-100%);
   }
 }
 .projects {
+  position: relative;
   padding: 64px 16px 56px;
   color: black;
+  background: whitesmoke;
+  background: linear-gradient(135deg, whitesmoke 6%, #f5eded 14%, #d0cbc6 25%, #aaa89e 43%, #5f634f 64%);
 }
 @media screen and (min-width: 768px) {
   .projects {
-    margin: 0 3rem;
+    padding: 64px 56px 56px;
   }
 }
 .projects__header {
   font-weight: bold;
   font-size: 36px;
   line-height: 48px;
+}
+@media screen and (min-width: 1024px) {
+  .projects__header {
+    font-size: 3rem;
+  }
 }
 .projects__description {
   font-weight: 300;
@@ -591,26 +926,50 @@ main span.shot:hover img {
 }
 
 .about-me {
-  border-top: 2px solid black;
-  padding: 2rem 2.2rem;
+  padding: 5rem 2.2rem;
   font-family: "Zen Kurenaido", sans-serif;
 }
 .about-me h2 {
   font-size: 2.2rem;
 }
+@media screen and (min-width: 1024px) {
+  .about-me h2 {
+    font-size: 3rem;
+  }
+}
 .about-me .who {
   margin-top: 2.2rem;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .about-me .who {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: max-content max-content;
+    gap: 1.2rem;
+    margin-top: 8rem;
+  }
 }
 .about-me .who h3 {
   font-size: 1.5rem;
   line-height: 2.2rem;
   margin: 0 auto;
 }
+@media screen and (min-width: 1024px) {
+  .about-me .who h3 {
+    font-size: 3rem;
+    grid-row: 1/3;
+  }
+}
 .about-me .who p {
   font-size: 1.2rem;
   margin: 1.2rem 0 0 0;
   text-align: left;
+}
+@media screen and (min-width: 1024px) {
+  .about-me .who p {
+    font-size: 1.5rem;
+  }
 }
 .about-me .who img {
   margin: 1.8rem 0 60px;
@@ -625,16 +984,32 @@ main span.shot:hover img {
 .about-me .passion {
   margin-top: 1.2rem;
 }
+@media screen and (min-width: 1024px) {
+  .about-me .passion {
+    margin-top: 2.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content max-content;
+    gap: 4rem;
+    max-width: 1260px;
+  }
+}
 .about-me .passion h3 {
   font-size: 1.5rem;
   line-height: 2.2rem;
-  width: 200px;
   margin: 0 auto;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .about-me .passion h3 {
     font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-me .passion h3 {
+    font-size: 2.2rem;
+    grid-column: 1/-1;
+    margin-bottom: 2rem;
   }
 }
 .about-me .passion section {
@@ -661,6 +1036,27 @@ main span.shot:hover img {
   }
 }
 
+footer {
+  background: silver;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+footer ul li {
+  list-style: none;
+  font-size: 2rem;
+}
+footer ul li a {
+  color: black;
+}
+footer ul li a:hover {
+  color: #3997f7;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -677,29 +1073,47 @@ body .deco {
   width: 4rem;
   border-bottom: 3px solid red;
 }
+@media screen and (min-width: 1024px) {
+  body .deco {
+    grid-column: 1/3;
+  }
+}
 body .deco:nth-child(2) {
   transform: translate(1.2rem, 0.8rem);
 }
 
 .btn-container {
   text-align: center;
-  margin: 2rem 0 4rem;
+  margin: 6rem 0 2rem;
 }
 .btn-container button {
   border: none;
-  font-size: 1.8rem;
-  padding: 1rem 2.2rem;
-  background-image: url("../images/cosmos.jpg");
-  background-position: center;
-  background-size: cover;
+  font-size: 1.5rem;
+  padding: 1rem 5rem;
+  background: #212528;
   border-radius: 1rem;
-  color: whitesmoke;
   box-shadow: 2px 2px 5px 1px black;
+}
+.btn-container button:hover {
+  background: #212528;
+}
+.btn-container button:hover a {
+  color: white;
 }
 .btn-container button a {
   text-decoration: none;
-  color: whitesmoke;
-  font-weight: bold;
+  color: white;
+}
+
+.clip {
+  position: absolute;
+  bottom: calc(-8vh + 2px);
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 8vh;
+  background: #5f634f;
+  clip-path: polygon(18% 29%, 0 60%, 0 0, 100% 0, 100% 57%, 92% 27%, 78% 55%, 63% 33%, 45% 60%, 35% 24%, 21% 44%);
 }
 
 /*# sourceMappingURL=main.css.map */

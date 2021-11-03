@@ -20,9 +20,52 @@
       <div id="stars2"></div>
       <div id="stars3"></div>
       <header>
+        <section class="sec-request ">
+          <button id="cancel">Cancel</button>
+          <div class="wrap">
+            <img src="./images/moon.jpg" alt="">
+            <h3>Project request</h3>
+            <p>This form helps me to quickly understand what your project is about and clarifies important questions in
+              advance. Therefore, please be as precise as possible with your information, as it saves us both time.</p>
+            <button class="start">start ></button>
+          </div>
+          <section class="sec-request-service">
+            <!-- <button id="cancel">Cancel</button> -->
+            <h3>Which services do you need?</h3>
+            <form action="#">
+              <label for="webdev"> Web Development <input id="webdev" type="checkbox">
+              </label>
+              <label for="webdes"> Web Design <input id="webdes" type="checkbox">
+              </label>
+              <label for="other"> Other <input id="other" type="checkbox">
+              </label>
+            </form>
+            <button class="next">next ></button>
+          </section>
+          <section class="sec-request-des">
+            <h3>Please describe your visions for this project.</h3>
+            <form action="#">
+              <label for="des"> </label>
+              <textarea name="des" id="des" required></textarea>
+            </form>
+            <button class="next2">next ></button>
+          </section>
+          <section class="sec-request-contact">
+            <h3>How can I contact you?</h3>
+            <form action="#">
+              <label for="fname">First name: </label>
+              <input type="text" required minlength="2" id="fname">
+              <label for="sname">Last name </label>
+              <input type="text" required minlength="2">
+              <label for="email">Email </label>
+              <input type="email" required minlength="2">
+            </form>
+            <button class="submit">Submit</button>
+          </section>
+        </section>
         <nav>
           <h2>Karol W.</h2>
-          <h2><a href="#">Project Request</a></h2>
+          <h2 class="request"><a href="#">Project Request ></a></h2>
           <button class="burger">
             <span class="span1 "></span>
             <span class="span2 "></span>
@@ -33,8 +76,9 @@
               <li><a href="#skills">skills</a></li>
               <li><a href="#project">project</a></li>
               <li><a href="#about">about me</a></li>
-              <li class="icon"><a href="#"><i class="fab fa-github"></i></a></li>
-              <li class="icon"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <li class="icon"><a href="https://github.com/karolwasemann"><i class="fab fa-github"></i></a></li>
+              <li class="icon"><a href="https://de.linkedin.com/in/karol-wasemann"><i
+                    class="fab fa-linkedin-in"></i></a></li>
             </ul>
           </div>
         </nav> <img class="star" src="./images/shooting-star.png" alt="">
@@ -63,10 +107,11 @@
     </div>
     <main>
       <section id="skills" class="skills">
-        <section class="skill anima">
-          <h2>My Skills</h2>
-          <div class="deco"></div>
-          <div class="deco"></div>
+        <h2>My Skills</h2>
+        <div class="deco"></div>
+        <div class="deco"></div>
+        <section class="skill anima cool">
+          <h3>Here are some of them</h3>
           <p>Look on my skills! Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nihil sint dolorem enim
             distinctio fugit deserunt alias quos quae amet</p>
           <figure>
@@ -98,10 +143,8 @@
             </div>
           </figure>
         </section>
-        <section class="skill">
-          <h2>Clean code</h2>
-          <div class="deco"></div>
-          <div class="deco"></div>
+        <section class="skill code">
+          <h3>Clean code</h3>
           <code>
             <pre>
 <span>&ltul&gt</span>
@@ -117,10 +160,8 @@
   </pre>
           </code>
         </section>
-        <section class="skill ">
-          <h2>Lightning-fast</h2>
-          <div class="deco"></div>
-          <div class="deco"></div>
+        <section class="skill lightning cool">
+          <h3>Lightning-fast</h3>
           <p>Websites tailored to the highest and latest standards.</p>
           <span class="shot"><img src="./images/shot.png" alt=""></span>
         </section>
@@ -133,47 +174,54 @@
         <p class="projects__description"> I started my frontend developer path in 2019. Since then, I’ve built some
           projects. Here’s the list of the things I’ve done so far. </p>
         <div class="projects-grid projects-grid--js "></div>
+        <div class="btn-container"><button><a target="_blank"
+              href="https://github.com/karolwasemann?tab=repositories">Show more</a></button></div>
+        <span class="clip"></span>
       </section>
-      <div class="btn-container"><button><a target="_blank"
-            href="https://github.com/karolwasemann?tab=repositories">Show more</a></button></div>
       <!-- About Me Section -->
       <section id="about" class="about-me">
         <h2>About Me</h2>
         <div class="deco"></div>
         <div class="deco"></div>
         <article class="who">
-          <h3> Who on earth is Karol Wasemann? </h3>
-          <p>Karol comes from Poland but has lived in Berlin for a long time. He has a bachelor's degree in management
-            but has been fascinated by Web Development for a long time. Currently he is a student at DCI.</p>
-          <img src="./images/albi.jpg" alt="My and dog">
+          <h3>&lt Who I am? /&gt </h3>
+          <p> I am originally from Poland, but I have been living in Berlin for a long time. I have a bachelor's degree
+            in management, but I have been fascinated with Web Development for a long time. Currently I am a DCI
+            student.</p>
+          <figure> <img src="./images/albi.jpg" alt="My and dog"></figure>
         </article>
         <article class="passion">
-          <h3>PASSION</h3>
+          <h3>&lt PASSION /&gt</h3>
           <section>
             <img src="./images/laptop.png" alt="laptop">
             <h4>Technology</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, veritatis? Nam nihil voluptas
-              molestias ipsa vero minus, laudantium atque beatae. Quod dolorem ipsam cum illum, iure pariatur harum fuga
-              nostrum.</p>
+            <p>I've always been fascinated by technology, as a child I often found myself screwing around with various
+              gadgets like joysticks or mp3 players. Today, unfortunately, all I have left is to follow the
+              technological news.</p>
           </section>
           <section>
             <img src="./images/self-growth.png" alt="superman">
             <h4>self-development</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel veritatis cumque odit aliquam accusantium
-              praesentium. Quis iusto itaque, magni laudantium, nihil ratione, illo ab et corporis enim alias ipsa!
-              Distinctio!</p>
+            <p>I have been fascinated with this subject for several years. Thanks to this passion I have already changed
+              many things in my life for the better. I love books from which I can learn something that will improve my
+              life. Mostly they are books about nutrition, learning process, technology or sleep.</p>
           </section>
           <section>
             <img src="./images/active.png" alt="activity">
             <h4>Activity</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus magni molestias
-              laudantium quisquam beatae harum deserunt. Quis perferendis nihil inventore architecto? Iure reiciendis
-              modi voluptatum facere veniam fugiat aspernatur?</p>
+            <p>Activity is what gives me true happiness, whenever I have free time I try to spend it actively. It does't
+              matter whether it is walking, cycling, climbing mountains or gardening, each activity gives me a huge
+              amount of energy.</p>
           </section>
         </article>
       </section>
     </main>
     <footer>
+      <ul>
+        <li><a target="_blank" href="https://github.com/karolwasemann"><i class="fab fa-github"></i></a></li>
+        <li><a target="_blank" href="https://de.linkedin.com/in/karol-wasemann"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="mailto:kw.kwaq@gmail.com"><i class="fas fa-envelope"></i></a></li>
+      </ul>
     </footer>
     <script src="index.js"></script>
   </body>

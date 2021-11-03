@@ -1,0 +1,22 @@
+footer {
+  background: silver;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+footer ul li {
+  list-style: none;
+  font-size: 2rem;
+}
+footer ul li a {
+  color: black;
+}
+footer ul li a:hover {
+  color: #3997f7;
+}
+
+/*# sourceMappingURL=footer.css.map */

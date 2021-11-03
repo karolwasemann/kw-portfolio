@@ -1,0 +1,26 @@
+footer {
+    background: silver;
+
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+
+        li {
+            list-style: none;
+            font-size: 2rem;
+
+            a {
+                color: black;
+
+                &:hover {
+                    color: #3997f7;
+                }
+            }
+
+        }
+    }
+}
