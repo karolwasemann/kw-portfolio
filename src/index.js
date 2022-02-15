@@ -8,6 +8,19 @@ const nav = document.querySelector(".nav-container");
 const span1 = document.querySelector(".span1");
 const span2 = document.querySelector(".span2");
 
+const request_btn = document.querySelector(".request");
+const request_sec = document.querySelector(".sec-request");
+
+const cancel = document.getElementById("cancel");
+
+const btn_start = document.querySelector(".start");
+const sec_request_service = document.querySelector(".sec-request-service");
+const sec_request_des = document.querySelector(".sec-request-des");
+const sec_request_contact = document.querySelector(".sec-request-contact");
+
+const btn_next = document.querySelector(".next");
+const btn_next2 = document.querySelector(".next2");
+
 
 burger.addEventListener("click", function () {
   nav.classList.toggle('toggler');
@@ -17,10 +30,6 @@ burger.addEventListener("click", function () {
 
 
 // Project request
-const request_btn = document.querySelector(".request");
-const request_sec = document.querySelector(".sec-request");
-
-const cancel = document.getElementById("cancel")
 
 
 request_btn.addEventListener("click", function () {
@@ -40,10 +49,6 @@ cancel.addEventListener("click", function () {
 
 // start
 
-const btn_start = document.querySelector(".start");
-const sec_request_service = document.querySelector(".sec-request-service");
-const sec_request_des = document.querySelector(".sec-request-des");
-const sec_request_contact = document.querySelector(".sec-request-contact");
 
 
 
@@ -51,9 +56,6 @@ btn_start.addEventListener("click", function () {
   sec_request_service.classList.add("open");
 
 });
-
-const btn_next = document.querySelector(".next");
-const btn_next2 = document.querySelector(".next2");
 
 
 

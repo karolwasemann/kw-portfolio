@@ -1,0 +1,207 @@
+main {
+  min-height: 100vh;
+  color: black;
+  background: whitesmoke;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main .skills {
+  padding: 2rem 1rem;
+}
+@media screen and (min-width: 1024px) {
+  main .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+main .skills h2 {
+  margin-top: 2rem;
+  font-size: 2.2rem;
+}
+@media screen and (min-width: 1024px) {
+  main .skills h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .anima {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .code {
+    grid-column: 1/2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .lightning {
+    grid-column: 2/3;
+  }
+}
+main .skill {
+  margin: 3rem auto;
+  background: #fefefe;
+  width: 90%;
+  border-radius: 1.8rem;
+  padding: 1.8rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  main .skill {
+    padding: 2.2rem 1.8rem;
+  }
+}
+main .skill h3 {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  main .skill h3 {
+    font-size: 1.5rem;
+  }
+}
+main .skill p {
+  margin-top: 1.8rem;
+}
+main .skill figure {
+  width: 254px;
+  margin: 0;
+  height: 200px;
+  background-image: url(../images/monitorr.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 5rem auto;
+}
+@media screen and (min-width: 768px) {
+  main .skill figure {
+    transform: scale(1.4);
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .skill figure {
+    transform: scale(2);
+    margin: 10rem auto;
+  }
+}
+main .skill figure .wall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  width: 250px;
+  height: 144px;
+  overflow: hidden;
+}
+main .skill figure ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 146px;
+}
+main .skill figure ul.train {
+  transform: translateX(250px);
+  -webkit-animation: train 15s linear infinite;
+          animation: train 15s linear infinite;
+}
+main .skill figure ul.waterfall {
+  flex-direction: column;
+  height: 1460px;
+  transform: translateY(146px);
+  -webkit-animation: waterfall 15s linear infinite;
+          animation: waterfall 15s linear infinite;
+}
+main .skill figure ul li {
+  width: 250px;
+  height: 146px;
+  font-size: 28px;
+  background: transparent;
+  color: whitesmoke;
+  border-radius: 0.2rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .cool {
+  background: #d9d7d7;
+  background: linear-gradient(122deg, #d9d7d7 28%, #9b9a9a 63%, rgba(173, 173, 173, 0.7) 74%);
+  color: black;
+}
+main pre {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  main pre {
+    font-size: 1rem;
+    margin-left: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main pre {
+    margin-top: 5rem;
+  }
+}
+main pre span {
+  color: red;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  main pre span {
+    font-size: 1.2rem;
+  }
+}
+main span.shot {
+  display: block;
+  margin: 5rem auto 2rem;
+  width: 90%;
+  border: 0.2rem solid black;
+  border-bottom: 10px solid black;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+main span.shot img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+main span.shot:hover img {
+  transform: translate(-60px, 30px) scale(1.6);
+}
+
+@-webkit-keyframes train {
+  from {
+    transform: translateX(250px);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes train {
+  from {
+    transform: translateX(250px);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes waterfall {
+  from {
+    transform: translateY(144px);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes waterfall {
+  from {
+    transform: translateY(144px);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}/*# sourceMappingURL=skills.css.map */

@@ -23,7 +23,7 @@
         <section class="sec-request ">
           <button id="cancel">Cancel</button>
           <div class="wrap">
-            <img src="./images/moon.jpg" alt="">
+            <img src="./images/moon.jpg" alt="Moon">
             <h3>Project request</h3>
             <p>This form helps me to quickly understand what your project is about and clarifies important questions in
               advance. Therefore, please be as precise as possible with your information, as it saves us both time.</p>
@@ -46,7 +46,7 @@
             <h3>Please describe your visions for this project.</h3>
             <form action="#">
               <label for="des"> </label>
-              <textarea name="des" id="des" required></textarea>
+              <textarea name="des" id="des" name="des" required></textarea>
             </form>
             <button class="next2">next ></button>
           </section>
@@ -54,11 +54,11 @@
             <h3>How can I contact you?</h3>
             <form action="#">
               <label for="fname">First name: </label>
-              <input type="text" required minlength="2" id="fname">
+              <input type="text" name="fname" required minlength="2" id="fname">
               <label for="sname">Last name </label>
-              <input type="text" required minlength="2">
+              <input type="text" name="sname" required minlength="2">
               <label for="email">Email </label>
-              <input type="email" required minlength="2">
+              <input type="email" name="email" required minlength="2">
             </form>
             <button class="submit">Submit</button>
           </section>
@@ -81,7 +81,7 @@
                     class="fab fa-linkedin-in"></i></a></li>
             </ul>
           </div>
-        </nav> <img class="star" src="./images/shooting-star.png" alt="">
+        </nav> <img class="star" src="./images/shooting-star.png" alt="Star">
         <figure>
           <img src="./images/Weather_icon_-_full_moon.svg" alt="Moon">
         </figure>
@@ -112,8 +112,7 @@
         <div class="deco"></div>
         <section class="skill anima cool">
           <h3>Here are some of them</h3>
-          <p>Look on my skills! Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nihil sint dolorem enim
-            distinctio fugit deserunt alias quos quae amet</p>
+          <p>Look on my skills! Here are some topics I'm comfortable with </p>
           <figure>
             <div class="wall">
               <ul class="train">
@@ -163,7 +162,7 @@
         <section class="skill lightning cool">
           <h3>Lightning-fast</h3>
           <p>Websites tailored to the highest and latest standards.</p>
-          <span class="shot"><img src="./images/shot.png" alt=""></span>
+          <span class="shot"><img src="./images/shot.png" alt="screenshot"></span>
         </section>
       </section>
       <!-- Project Section -->
@@ -174,8 +173,8 @@
         <p class="projects__description"> I started my frontend developer path in 2019. Since then, I’ve built some
           projects. Here’s the list of the things I’ve done so far. </p>
         <div class="projects-grid projects-grid--js "></div>
-        <div class="btn-container"><button><a target="_blank"
-              href="https://github.com/karolwasemann?tab=repositories">Show more</a></button></div>
+        <div class="btn-container"><button><a target="_blank" href="https://github.com/karolwasemann">Show
+              more</a></button></div>
         <span class="clip"></span>
       </section>
       <!-- About Me Section -->
@@ -188,7 +187,7 @@
           <p> I am originally from Poland, but I have been living in Berlin for a long time. I have a bachelor's degree
             in management, but I have been fascinated with Web Development for a long time. Currently I am a DCI
             student.</p>
-          <figure> <img src="./images/albi.jpg" alt="My and dog"></figure>
+          <figure> <img src="./images/albi.jpg" alt="My and dog" title="Me and dog"></figure>
         </article>
         <article class="passion">
           <h3>&lt PASSION /&gt</h3>

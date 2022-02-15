@@ -56,8 +56,10 @@
 .project__grid {
   padding: 0 10px;
   display: grid;
+  grid-template-columns: -webkit-min-content 1fr;
   grid-template-columns: min-content 1fr;
-  column-gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
 }
 .project__grid--last {
   padding-bottom: 48px;
@@ -116,7 +118,8 @@
 
 .projects-grid {
   display: grid;
-  column-gap: 24px;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
   row-gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
@@ -125,6 +128,4 @@
   .projects-grid {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-/*# sourceMappingURL=project.css.map */
+}/*# sourceMappingURL=project.css.map */
