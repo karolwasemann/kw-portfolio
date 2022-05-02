@@ -561,7 +561,7 @@ header .star {
 }
 @media screen and (min-width: 768px) {
   header .star {
-    animation: star-move-tablet 7s 2s;
+    animation: star-move-tablet 7s 1s;
   }
 }
 header .slider {

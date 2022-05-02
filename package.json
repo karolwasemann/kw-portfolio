@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate-projekt",
+  "name": "karolwasemann-portfolio",
   "version": "1.0.0",
-  "description": "Grundsetup für Projekte",
+  "description": "Simple portfolio website",
   "main": "index.js",
   "scripts": {
     "start": "concurrently npm:sass-watch npm:src-watch",
@@ -10,7 +10,7 @@
     "build": "sass src/scss:src/styles",
     "copy": "rsync -avr src/ dist --exclude=\"/scss\" ",
     "clean": "rm -rf dist && mkdir dist",
-    "publish": "gh-pages -d dist"
+    "publish": "npm run build && gh-pages -d -b main"
   },
   "repository": {
     "type": "git",
